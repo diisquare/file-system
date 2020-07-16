@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('/post','PostController@index')->name('post');
 Route::get('/post/download','PostController@download')->name('post-download');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

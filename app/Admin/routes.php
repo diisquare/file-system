@@ -9,7 +9,7 @@ Route::group([
     'namespace'     => config('admin.route.namespace'),
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
-
+    $router->resource('users', UserController::class);
     $router->get('/', 'HomeController@index')->name('admin.home');
 
     $router->get('file-manager', 'AdminFileManagerController@index')
@@ -35,3 +35,6 @@ Route::group([
     }
 );
 //'StorageController@index'
+
+
+
