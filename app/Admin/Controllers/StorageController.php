@@ -27,6 +27,5 @@ class StorageController extends Controller
 
         $local_path = config('filesystems.disks.public.root') . DIRECTORY_SEPARATOR . $file_path;
         return response()->file($local_path);
-
     }
 }
